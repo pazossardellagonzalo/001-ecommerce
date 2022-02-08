@@ -1,0 +1,42 @@
+<a mat-raised-button color="primary" style="margin-left:35%;margin-right:35%;display:block;margin-top:5%;margin-bottom:5%" routerLink="Productos">Agregar Cliente</a>
+<h1 style="font-size: 35px;margin-bottom: 2%;">Clientes:</h1>
+<table class="table table-striped"> 
+    <thead> 
+        <tr>
+            <th>DNI:</th>
+            <th>Nombre:</th>
+            <th>pApellido:</th>
+            <th>sApellido:</th>
+            <th>Edad:</th>
+            <th>Pais:</th>
+            <th>Sexo:</th>
+            <th>Telefono:</th>
+            <th>Correo:</th>
+            <th>Socio:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cliente of clientes">
+            <td>{{ cliente._dni }}</td>
+            <td>{{ cliente._nombre }}</td>
+            <td>{{ cliente._primerApellido }}</td>
+            <td>{{ cliente._segundoApellido }}</td>
+            <td>{{ cliente._edad }}</td>
+            <td>{{ cliente._pais }}</td>
+            <td>{{ cliente._sexo }}</td>
+            <td>{{ cliente._tlf }}</td>
+            <td>{{ cliente._correo }}</td>
+            <td>{{ cliente._socio }}</td>
+            <td>
+                <button class="btn btn-secondary btn-sm">
+                    <i class="material-icons">edit</i>
+                </button>
+                <button class="btn btn-danger btn-sm">
+                    <i class="material-icons">delete</i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
